@@ -1,0 +1,13 @@
+1.下載
+  Git-Scam
+  Heroku-CLI
+  
+2.cmd 輸入
+  heroku login  (登入heroku)
+  git init  (建立git)
+  git add .  (加入資料夾內所有資料)
+  git commit -m "init node" (建立版本)
+  heroku git:remote -a simple-semaster  (連接APP)
+  git push heroku master [-f] (推上網頁；[-f] 是強制推上去，所以可打可不打)
+  heroku ps:scale web=1
+  heroku open
