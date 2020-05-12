@@ -1,3 +1,4 @@
+#給網址
 1.下載
   Git-Scam
   Heroku-CLI
@@ -11,3 +12,23 @@
   git push heroku master [-f] (推上網頁；[-f] 是強制推上去，所以可打可不打)
   heroku ps:scale web=1
   heroku open
+  
+參考網頁：
+1. <https://oranwind.org/git-zai-windows-xia-an-zhuang-git-ban-ben-kong-zhi/>
+2. <https://iandays.com/2018/06/17/nodestart/>
+
+
+#htmml跨頁傳值([參考網頁](https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/javascript-localstorage-%E7%9A%84%E4%BD%BF%E7%94%A8-e0da6f402453)
+
+###a.html
+localStorage.setItem(key, value);  //存入資料
+localSession.getItem(key, value);  //存入資料
+
+###b.html
+var value = JSON.parse(localStorage.getItem("key"));  //取出資料並存於json
+var value = JSON.parse(localSession.getItem("key"));  //取出資料並存於json
+
+##localStorage與localSession的差別
+1. localStorage：可以跨瀏覽器分頁做使用、使用者關掉分頁或瀏覽器再打開資料仍不會消失，且資料無期效限制，資料將永久被保留。
+2. sessionStorage：生命週期較短，當使用者關掉瀏覽器或分頁時，sessionStorage 中的資料將被清空。
+
